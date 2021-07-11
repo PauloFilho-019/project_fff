@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
+require("dotenv").config();
 const ytdl = require('ytdl-core');
 const streamOptions = { seek: 0, volume: 1 };
 
-const token = 'ODYyNzMzMTY4OTcxNzQzMjMy.YOco4A.xBQBVcHdlYvGPW5wPz7udTfV7V4';
-bot.login(token);
+bot.login(process.env.TOKEN);
 
 bot.on('ready', () => {
     //message.channel.send("Digita um !Info pra ver os comandos disponiveis e umas fita a mais ae")
@@ -16,8 +16,14 @@ bot.on('message', msg => {
         return;
     }
     if (msg.content === ("!Info")) {
-        msg.channel.send("Projeto Ff&f (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonorros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): '!Rapaz', '!Irra', '!Uepa' e '!Pare------------");
+        msg.channel.send("Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonorros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): '!Rapaz', '!Irra', '!Uepa' e '!Pare------------");
     }
+
+    //!Rapaz :'https://www.youtube.com/watch?v=Jvl0L9GRH6o',
+    //!Uepa :'https://youtu.be/UpNy0v_ur-o';
+    //!Pare :'https://www.youtube.com/watch?v=QO7fw-OcOD4';
+    //!Irra :'https://youtu.be/CSDVrF5gAus';
+
     if (msg.content === ("!Rapaz")) {
         let VoiceChannel = msg.guild.channels.cache.find(channel => channel.id === '832066730477879322');
 
