@@ -15,117 +15,48 @@ bot.on("message", (msg) => {
   if (msg.author.bot) {
     return;
   }
+
   function toca(youtubeLink) {
-    if (msg.content.indexOf("youtube") !== -1) {
-      let VoiceChannel = msg.guild.channels.cache.find(
-        (channel) => channel.id === "832066730477879322"
-      );
+    let VoiceChannel = msg.guild.channels.cache.find(
+      (channel) => channel.id === "832066730477879322"
+    );
 
-      if (VoiceChannel == null) {
-        console.log("Canal não encontrado");
-      }
+    if (VoiceChannel == null) {
+      console.log("Canal não encontrado");
+    }
 
-      if (VoiceChannel !== null) {
-        console.log("Canal foi encontrado");
+    if (VoiceChannel !== null) {
+      console.log("Canal foi encontrado");
 
-        VoiceChannel.join()
-          .then((connection) => {
-            const stream = ytdl(youtubeLink, { filter: "audioonly" });
+      VoiceChannel.join()
+        .then((connection) => {
+          const stream = ytdl(youtubeLink, { filter: "audioonly" });
 
-            const DJ = connection.play(stream, streamOptions);
-            DJ.on("end", (end) => {
-              VoiceChannel.leave();
-            });
-          })
-          .catch(console.error);
-      }
+          const DJ = connection.play(stream, streamOptions);
+          DJ.on("end", (end) => {
+            VoiceChannel.leave();
+          });
+        })
+        .catch(console.error);
     }
   }
-  if (msg.content === "!Info") {
+
+  if (msg.content === "!info") {
     msg.channel.send(
       "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): '!Rapaz', '!Irra', '!Uepa' e '!Pare------------"
     );
   }
-  if (msg.content === "!Rapaz") {
+  if (msg.content === "!rapaz") {
     toca("https://www.youtube.com/watch?v=Jvl0L9GRH6o");
   }
-  if (msg.content === "!Uepa") {
-    let VoiceChannel = msg.guild.channels.cache.find(
-      (channel) => channel.id === "832066730477879322"
-    );
-
-    if (VoiceChannel == null) {
-      console.log("Canal não encontrado");
-    }
-
-    if (VoiceChannel !== null) {
-      console.log("Canal foi encontrado");
-
-      VoiceChannel.join()
-        .then((connection) => {
-          const stream = ytdl("https://youtu.be/UpNy0v_ur-o", {
-            filter: "audioonly",
-          });
-
-          const DJ = connection.play(stream, streamOptions);
-          DJ.on("end", (end) => {
-            VoiceChannel.leave();
-          });
-        })
-        .catch(console.error);
-    }
+  if (msg.content === "!uepa") {
+    toca("https://youtu.be/UpNy0v_ur-o");
   }
-  if (msg.content === "!Pare") {
-    let VoiceChannel = msg.guild.channels.cache.find(
-      (channel) => channel.id === "832066730477879322"
-    );
-
-    if (VoiceChannel == null) {
-      console.log("Canal não encontrado");
-    }
-
-    if (VoiceChannel !== null) {
-      console.log("Canal foi encontrado");
-
-      VoiceChannel.join()
-        .then((connection) => {
-          const stream = ytdl("https://www.youtube.com/watch?v=QO7fw-OcOD4", {
-            filter: "audioonly",
-          });
-
-          const DJ = connection.play(stream, streamOptions);
-          DJ.on("end", (end) => {
-            VoiceChannel.leave();
-          });
-        })
-        .catch(console.error);
-    }
+  if (msg.content === "!pare") {
+    toca("https://www.youtube.com/watch?v=QO7fw-OcOD4");
   }
-  if (msg.content === "!Irra") {
-    let VoiceChannel = msg.guild.channels.cache.find(
-      (channel) => channel.id === "832066730477879322"
-    );
-
-    if (VoiceChannel == null) {
-      console.log("Canal não encontrado");
-    }
-
-    if (VoiceChannel !== null) {
-      console.log("Canal foi encontrado");
-
-      VoiceChannel.join()
-        .then((connection) => {
-          const stream = ytdl("https://youtu.be/CSDVrF5gAus", {
-            filter: "audioonly",
-          });
-
-          const DJ = connection.play(stream, streamOptions);
-          DJ.on("end", (end) => {
-            VoiceChannel.leave();
-          });
-        })
-        .catch(console.error);
-    }
+  if (msg.content === "!irra") {
+    toca("https://youtu.be/CSDVrF5gAus");
   }
 });
 
