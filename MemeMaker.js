@@ -15,10 +15,8 @@ bot.on("message", (msg) => {
   if (msg.author.bot) {
     return;
   }
-  function toca() {
+  function toca(youtubeLink) {
     if (msg.content.indexOf("youtube") !== -1) {
-      let youtubeLink = CompleteMessage[1];
-
       let VoiceChannel = msg.guild.channels.cache.find(
         (channel) => channel.id === "832066730477879322"
       );
@@ -49,7 +47,7 @@ bot.on("message", (msg) => {
     );
   }
   if (msg.content === "!Rapaz") {
-    toca.youtubeLink = "https://www.youtube.com/watch?v=Jvl0L9GRH6o";
+    toca("https://www.youtube.com/watch?v=Jvl0L9GRH6o");
   }
   if (msg.content === "!Uepa") {
     let VoiceChannel = msg.guild.channels.cache.find(
