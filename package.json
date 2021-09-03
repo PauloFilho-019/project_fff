@@ -4,8 +4,9 @@
   "description": "",
   "main": "MemeMaker.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "start":"node MemeMaker.js",
+    "test":"nodemon MemeMaker.js"
+   },
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -13,6 +14,7 @@
     "dotenv": "^10.0.0",
     "ffbinaries": "^1.1.4",
     "ffmpeg-static": "^4.4.0",
+    "nodemon": "^2.0.12",
     "opusscript": "0.0.8",
     "ytdl-core": "^4.8.3"
   }
