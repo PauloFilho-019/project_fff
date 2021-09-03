@@ -4,7 +4,7 @@
   "description": "",
   "main": "MemeMaker.js",
   "scripts": {
-    "start":"node MemeMaker.js",
+    "start":"node index",
     "test":"nodemon MemeMaker.js"
    },
   "author": "",
