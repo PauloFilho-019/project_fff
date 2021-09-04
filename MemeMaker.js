@@ -65,9 +65,7 @@ bot.on("message", (msg) => {
 
   if (command === "iinfo") {
     msg.channel.send(
-      "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): " +
-        commands +
-        "------------"
+      "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): suspense, gatinho, grito, tarzan, ratinho, qisso, irra, pare, uepa, rapaz------------"
     );
     return;
   }
