@@ -1,1 +1,1 @@
-worker: node MemeMaker.js
+worker: node ,
