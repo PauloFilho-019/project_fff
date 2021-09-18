@@ -4,6 +4,11 @@ require("dotenv").config();
 const ytdl = require("ytdl-core");
 const streamOptions = { seek: 0, volume: 1 };
 
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Our app is running on port ${PORT}`);
+});
+
 bot.login(process.env.TOKEN);
 
 bot.on("ready", () => {
