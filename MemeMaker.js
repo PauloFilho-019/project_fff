@@ -27,6 +27,20 @@ const commands = {
     "https://www.youtube.com/watch?v=OutIegT8HBg&list=PLRyDuP997asbuX7phvrSD8-LKhcvEXHox&index=10",
   suspense:
     "https://www.youtube.com/watch?v=GS7tHGWMDS4&list=PLier33pDdoyejhHwEqeKSST93RV_BKIig&index=19",
+  duelo: "https://www.youtube.com/watch?v=tv8nZHN29YI",
+  gordo: "https://www.youtube.com/watch?v=c11OYJstwIQ",
+  cair: "https://www.youtube.com/watch?v=lUddmmLzaOQ&list=PLIeGqcQGFzBXub2wpXDiDX_5xBHFBWiJU&index=29",
+  sarcas:
+    "https://www.youtube.com/watch?v=74DJ5JbTirI&list=PLIeGqcQGFzBXub2wpXDiDX_5xBHFBWiJU&index=28",
+  end: "https://www.youtube.com/watch?v=Fmvnfxyhwbw",
+  cazalb:
+    "https://www.youtube.com/watch?v=B132m_6Z150&list=PLabbG5fpT6yNZKI6OYwk8UP2PafB1hVG0&index=25",
+  cburro:
+    "https://www.youtube.com/watch?v=dfLFNQFpX7Q&list=PLabbG5fpT6yNZKI6OYwk8UP2PafB1hVG0&index=28",
+  demenci:
+    "https://www.youtube.com/watch?v=ypioV-jvT3o&list=PLabbG5fpT6yNZKI6OYwk8UP2PafB1hVG0&index=64",
+  toms: "https://www.youtube.com/watch?v=D0BZOsPn74M",
+  gritola: "https://www.youtube.com/watch?v=9FHw2aItRlw",
 };
 
 bot.on("message", (msg) => {
@@ -65,7 +79,7 @@ bot.on("message", (msg) => {
 
   if (command === "iinfo") {
     msg.channel.send(
-      "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): suspense, gatinho, grito, tarzan, ratinho, qisso, irra, pare, uepa, rapaz------------"
+      "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella.ㅤㅤㅤㅤㅤㅤㅤㅤ ------------Comandos Disponiveis (No Momento): suspense, gatinho, grito, tarzan, ratinho, qisso, irra, pare, uepa, rapaz, gordo, cair, sarcas, end, cazalb, cburro, demenci, toms, gritola------------"
     );
     return;
   }
