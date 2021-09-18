@@ -1,1 +1,2 @@
+--bind :$PORT
 worker: node MemeMaker.js
