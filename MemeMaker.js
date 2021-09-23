@@ -82,7 +82,7 @@ bot.on("message", (msg) => {
       "Projeto F.F.F (Futebol, Feijoada & Funk) é um bot que reproduz efeitos sonoros classicos da tv Brasileira desde o 'Rapaz' do xaropinho, até o João gordo brigando com o dolabella, Comandos Disponiveis (No Momento):"
     );
 
-    msg.channel.send(Object.keys(commands));
+    msg.channel.send(Object.keys(commands).join(", "));
     return;
   }
 
