@@ -17,6 +17,6 @@
     "ffmpeg-static": "^4.4.0",
     "nodemon": "^2.0.12",
     "opusscript": "0.0.8",
-    "ytdl-core": "^4.8.3"
+    "ytdl-core": "^4.9.1"
   }
 }
